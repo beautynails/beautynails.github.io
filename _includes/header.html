@@ -1,22 +1,18 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                {% for page in site.pages %}
-                {% if page.title %}
-                    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                {% endif %}
-                {% endfor %}
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-bars"></i></a>
+        <li class="sidebar-brand">
+            <a href="#top">{{ site.title }}</a>
+        </li>
+        {% assign sorted_pages = site.pages | sort: "weight" %}
+        {% for page in sorted_pages %}
+            {% if page.title %}
+                <li>
+                    <a href="#{{ page.slug }}" data-href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </nav>

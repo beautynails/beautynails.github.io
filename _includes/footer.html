@@ -1,34 +1,31 @@
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Contact</h2>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-            <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>{{ site.fullname }}</strong>
+                </h4>
+                <p>{{ site.address }}<br>{{ site.city }}</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i>{{ site.mobile }}</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.facebook.com/poshkrakow/"><i class="fa fa-facebook-square fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/beautynails/"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://beautynails.github.io/"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+            </div>
         </div>
     </div>
-
-    <hr>
-
-    <footer>
-        <p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
-    </footer>
-</div> <!-- /container -->
-
-<?%
-def print_hi(name)
-    puts "Hi, #{name}"
-end
-
-print_hi("tom");
-%>
+</footer>

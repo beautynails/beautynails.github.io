@@ -1,15 +1,41 @@
 # Site settings
-title: POSH Nails and Beauty
-author: POSH Nails and Beauty
+title: POSH Nails & Beauty
+author: POSH Nails & Beauty
 email: poshkrakow@facebook.com
+fullname: Posh nails&beauty stacjonarny i mobilny salon urody
+mobile: +48 608 048 904
+address: ul. Ostatnia 2h/47
+city: 31-444 Kraków
+vatid: 675-128-28-70
 description: > # this means to ignore newlines until "baseurl:"
   POSH Nails and Beauty, Kraków, Poland
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://beautynails.github.io/" # the base hostname & protocol for your site
+facebook_username: poshkrakow
+github_username:  beautynails
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: "_sass/"
+
+# Portfolio images
+portfolio:
+- name: posh1
+  src: images/portfolio/001.jpg
+- name: posh2
+  src: images/portfolio/002.jpg
+- name: posh3
+  src: images/portfolio/003.jpg
+- name: posh4
+  src: images/portfolio/004.jpg
+- name: posh5
+  src: images/portfolio/005.jpg
+- name: posh6
+  src: images/portfolio/006.jpg
+- name: posh7
+  src: images/portfolio/007.jpg
+- name: posh8
+  src: images/portfolio/008.jpg
+- name: posh9
+  src: images/portfolio/009.jpg

@@ -1,0 +1,35 @@
+---
+layout: blank
+title: Portfolio
+permalink: /portfolio/
+slug: portfolio
+weight: 499
+---
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>Moja praca</h2>
+                <hr class="small">
+                <div class="row">
+                        {% for image in site.portfolio %}
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img alt="{{ image.name }}" class="img-portfolio img-responsive" src="{{ image.src | prepend: site.baseurl }}">
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+                <!-- /.row (nested) -->
+                <a href="https://facebook.com/{{ site.facebook_username }}/" class="btn btn-dark">Więcej</a>
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
