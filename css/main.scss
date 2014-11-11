@@ -47,6 +47,15 @@ body {
 
 body {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #430043;
+}
+
+a {
+  color: #c000c0;
+}
+
+a:hover {
+  color: #850085;
 }
 
 .text-vertical-center {
@@ -269,4 +278,16 @@ hr.small {
 
 footer {
   padding: 100px 0;
+}
+
+.bg-posh {
+ background-color: #76388b;
+}
+
+.text-posh {
+  background-color: #76388b;
+}
+
+.service-item {
+  color: #fff;
 }

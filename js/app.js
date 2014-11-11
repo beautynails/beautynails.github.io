@@ -30,8 +30,9 @@ $(function () {
             url: $(this).data('href'),
             type: 'get',
             success: function (data) {
-                $(data).insertBefore('footer');
-            }
+                console.log(data);
+                $('#' + $(this).data('target')).html(data);
+            }.bind(this)
         });
     });
 });

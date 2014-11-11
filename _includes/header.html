@@ -10,7 +10,7 @@
         {% for page in sorted_pages %}
             {% if page.title %}
                 <li>
-                    <a href="#{{ page.slug }}" data-href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    <a href="#{{ page.slug }}" data-target="{{ page.slug }}" data-href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>
             {% endif %}
         {% endfor %}
