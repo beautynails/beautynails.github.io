@@ -30,7 +30,6 @@ $(function () {
             url: $(this).data('href'),
             type: 'get',
             success: function (data) {
-                console.log(data);
                 $('#' + $(this).data('target')).html(data);
             }.bind(this)
         });

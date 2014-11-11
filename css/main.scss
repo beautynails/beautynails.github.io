@@ -1,35 +1,36 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# main
 ---
+
 @charset "utf-8";
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
 $text-color: #0f2f00;
 $background-color: #fdfdfd;
 $brand-color: #309742;
 
-$grey-color:       #828282;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm: 600px;
+$on-laptop: 800px;
 
 $icon-font-path: "../fonts/" !default;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-    "bootstrap-compass",
-    "bootstrap",
-    "font-awesome"
-;
+@import "bootstrap-compass",
+"bootstrap",
+"font-awesome";
+
+@import url(http://fonts.googleapis.com/css?family=Domine:400,700&subset=latin,latin-ext);
 
 /*!
  * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
@@ -46,16 +47,16 @@ body {
 }
 
 body {
-  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #430043;
+  font-family: 'Domine', serif;
+  color: #14171c;
 }
 
 a {
-  color: #c000c0;
+  color: #a12676;
 }
 
 a:hover {
-  color: #850085;
+  color: #5e1a44;
 }
 
 .text-vertical-center {
@@ -76,27 +77,27 @@ a:hover {
 .btn-dark {
   border-radius: 0;
   color: #fff;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
   color: #fff;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btn-light {
   border-radius: 0;
   color: #333;
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
   color: #333;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Custom Horizontal Rule */
@@ -146,7 +147,7 @@ hr.small {
 .sidebar-nav li a:hover {
   text-decoration: none;
   color: #fff;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -268,7 +269,7 @@ hr.small {
   height: 500px;
 }
 
-@media(max-width:768px) {
+@media(max-width: 768px) {
   .map {
     height: 75%;
   }
@@ -281,13 +282,25 @@ footer {
 }
 
 .bg-posh {
- background-color: #76388b;
+  background-color: #a12676;
 }
 
 .text-posh {
-  background-color: #76388b;
+  color: #a12676;
 }
 
 .service-item {
   color: #fff;
+}
+
+#logo {
+  width: 200px;
+  position: absolute;
+  z-index: 999;
+}
+
+@media all and (max-width: 800px) {
+  #logo {
+    display: none;
+  }
 }
