@@ -16,16 +16,16 @@ weight: 499
                 {% for image in site.portfolio %}
                 <div class="col-md-6">
                     <div class="portfolio-item">
-                        <a href="#">
+                        <div class="inside">
                             <img alt="{{ image.name }}" class="img-portfolio img-responsive"
                                  src="{{ image.src | prepend: site.baseurl }}">
-                        </a>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
             <!-- /.row (nested) -->
-            <a href="https://facebook.com/{{ site.facebook_username }}/" class="btn btn-dark">Więcej</a>
+            <a href="https://facebook.com/{{ site.facebook_username }}/" class="btn btn-light">Więcej</a>
             <hr class="small">
         </div>
         <!-- /.col-lg-10 -->
