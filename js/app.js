@@ -35,3 +35,50 @@ $(function () {
         });
     });
 });
+
+function initialize() {
+    if (typeof google === 'undefined') {
+        return;
+    }
+    var mapOptions = {
+        center: {lat: 50.0670863, lng: 19.9139926},
+        zoom: 18,
+        styles: [
+            {
+                stylers: [
+                    {hue: "#ff00ff"},
+                    {saturation: -20}
+                ]
+            }, {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [
+                    {lightness: 100},
+                    {visibility: "simplified"}
+                ]
+            }, {
+                featureType: "road",
+                elementType: "labels"
+            }
+        ]
+    };
+    var contentString = '<div class="info-window">' +
+        '<img src="images/logo.jpg">' +
+        '<div id="body">' + $('.contact-information').html() +
+        '</div>' +
+        '</div>';
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var marker = new google.maps.Marker({position: mapOptions.center, map: map});
+    setTimeout(function () {
+        infowindow.open(map, marker);
+    }, 1000);
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
+}
+if (typeof google !== 'undefined') {
+    google.maps.event.addDomListener(window, 'load', initialize);
+}

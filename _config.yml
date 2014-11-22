@@ -14,7 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://beautynails.github.io/" # the base hostname & protocol for your site
 facebook_username: poshkrakow
 github_username:  beautynails
-
+google_maps_api: AIzaSyDhBl_sk5FlO0DhH4eZJgB7wBWGVu2jWUI
 # Build settings
 markdown: kramdown
 sass:
