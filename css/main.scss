@@ -31,7 +31,6 @@ $icon-font-path: "../fonts/" !default;
 "bootstrap",
 "font-awesome";
 
-
 /*!
  * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -286,29 +285,40 @@ hr.small {
 
 /* Map */
 
-.map {
-  height: 500px;
-}
-
-@media(max-width: 768px) {
-  .map {
-    height: 75%;
-  }
-}
-
 .map-contact {
   padding: 10px;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 15px 0px;
   border: #ff3dbc 1px solid;
-  height: 350px;
+  height: 450px;
   .info-window {
     color: #222222;
     img {
       width: 120px;
       float: left;
       margin-right: 10px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .map-contact {
+    height: 350px;
+    .info-window {
+      width: 300px;
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .map-contact {
+    .info-window {
+      width: 200px;
+      img {
+        width: 60px;
+        float: none;
+      }
     }
   }
 }

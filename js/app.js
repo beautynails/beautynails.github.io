@@ -34,6 +34,9 @@ $(function () {
             }.bind(this)
         });
     });
+    if (typeof google !== 'undefined') {
+        google.maps.event.addDomListener(window, 'load', initialize);
+    }
 });
 
 function initialize() {
@@ -78,7 +81,4 @@ function initialize() {
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
     });
-}
-if (typeof google !== 'undefined') {
-    google.maps.event.addDomListener(window, 'load', initialize);
 }
